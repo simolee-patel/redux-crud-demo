@@ -1,38 +1,157 @@
-.App {
-  text-align: center;
+
+
+
+/* Base Styling */
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    
+}
+:root{
+    --primaryColor:#11998e;
+    --secondaryColor:#38ef7d;
+    --white:#fff;
+    --gray:#9b9b9b;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo{
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 40vw;
+    display: flex;
+
+}
+.header{
+  display:flex;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+body{
+    font-family: 'Montserrat', Courier, monospace;
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.589);
+    color: white;
+    
+}
+/* End BaseStyling */
+.container
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    margin: auto;
+    border: 1px solid black;
+    flex-direction: column;
+    width: 80vw;
+    margin-top: 30px;
+    border-radius: 5px;
+    /* background-image: linear-gradient(to right, rgb(168, 255, 120), rgb(120, 255, 214)); */
+    background-color:rgba(0, 0, 0, 0.678);
+}
+.todo__input
+{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--gray);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    /* padding: .7rem 2rem;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 90%;
+    background-color: #f0eeee;
+    
+    width:40em;  
+    margin-top: 10px;  
+    height:40px;
+    transition:all .2s;
+    border: transparent; */
+   
+
+}
+.todo__input:focus{
+    padding-bottom:6px ;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--primaryColor),var(--secondaryColor));
+    border-image-slice:1 ;
+    
+}
+.todo__input-button{
+    height:40px;
+    width:80px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 10px;
+    border:transparent;
+}
+.list-main
+{
+    
+    margin: auto;
+    padding: auto;
+    width: 70em;
+    background-color:rgba(0, 0, 0, 0.397);
+    
+    margin-top: 20px;
+}
+.list-item
+{
+    padding: 5px 5px;
+    display:flex;
+    /* flex-direction: row; */
+    justify-content: space-around;
+    align-items: center;
+
+}
+.checkbox
+{
+    top: 60px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    
+}
+.uncheck
+{
+    font-size: 20px;
+    margin:0px;
+   
+}
+.list-main div
+{
+    font-size: 20px;
+    height: auto;
+    width: auto;
+}
+    
+.checked{
+    font-size: 20px;
+    margin:0px;
+    text-decoration: line-through;
+}
+.list-item-deleteButton
+{
+    margin-left: 100px;
+}
+.list-item-completeButton
+{
+    margin-left: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.icon-button{
+    width: 200px;
+   
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
